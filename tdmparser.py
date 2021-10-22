@@ -17,7 +17,7 @@
     ===============================================================
 
     This program, written by Claudio Tubertini, Bologna, 2021, is largely inspired 
-    on urllib.robotparser and on scrapy/protego. It implements the 
+    by urllib.robotparser and by scrapy/protego. It implements the 
     TDM Reservation Protocol (TDMRep), 
     Draft Community Group Report of 05 October 2021
     https://w3c.github.io/tdm-reservation-protocol/spec/
