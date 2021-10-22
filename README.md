@@ -1,5 +1,5 @@
 # TDMproposal
-Python library that implement the w3c TDM proposal
+Python library that implements the w3c TDM proposal.
 
 
 This library is now more of a draft than an alpha version. Every help will be welcomed.
