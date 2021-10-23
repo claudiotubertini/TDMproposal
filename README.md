@@ -12,3 +12,20 @@ The library is largely inspired by urllib.robotparser and by scrapy/protego. It 
 >>> tdm.check() 
 True 
 ```
+You can have a look to the logging file TDM_reservation.log that reports all relevant information about policies, reservation, etc.
+
+## API
+```
+class TDMParser  
+.... 
+class TDMFileParser  
+.... 
+class TDMHeader 
+.... 
+class TDMhtmlHead  
+.... 
+class Entry  
+.... 
+class _URLPattern 
+.... 
+```
