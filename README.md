@@ -10,7 +10,7 @@ The library is largely inspired by urllib.robotparser and by scrapy/protego. It 
 >>> import tdmparser 
 >>> tdm = tdmparser.TDMParser('http://207.154.202.197/') 
 >>> tdm.check() 
-True 
+[True, 'http://207.154.202.197/license', True]
 ```
 You can have a look to the logging file TDM_reservation.log that reports all relevant information about policies and reservation of the url you are scraping.
 
