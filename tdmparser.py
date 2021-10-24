@@ -33,8 +33,8 @@ from lxml import html
 
 __all__ = ["TDMParser"]
 
-logger = logging.getLogger(__name__)
 logging.basicConfig(filename='TDM_reservation.log', encoding='utf-8', format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %H:%M:%S', level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 _WILDCARDS = {'*', '$'}
 
