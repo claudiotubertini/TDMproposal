@@ -9,7 +9,7 @@ The library is largely inspired by urllib.robotparser and by scrapy/protego. It 
 `TDMParser.check()` tests all three ways to implement the proposal, namely, by order of importance and order in the list returned, html metadata, http header, tdmrep.json file. **For the time being** the method returns all values (the presence of a license means tdm-reservation=1, False means tdm-reservation=1 and there is  no license, True means tdm-reservation=0 or there is no tdm-reservation at all).   
 There is also a logging file that makes explicit all the reservation decisions made by the publisher. 
 
-How to manage inconsistencies and unset variables is still debated inside the commission, so I prefer to leave the problem to TDM agents.
+How to manage inconsistencies and unset variables is still not very clear to me, so I prefer to leave the problem to future discussions.
 
 
 ## Usage 
