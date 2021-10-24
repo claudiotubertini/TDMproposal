@@ -9,6 +9,7 @@ The library is largely inspired by urllib.robotparser and by scrapy/protego. It 
 ```
 >>> import tdmparser 
 >>> tdm = tdmparser.TDMParser('http://207.154.202.197/') 
+### TDMParser.check() tests all three ways to implement the proposal, namely, by order of importance, html metadata, http header, tdmrep.json file
 >>> tdm.check() 
 [True, 'http://207.154.202.197/license', True]
 ```
