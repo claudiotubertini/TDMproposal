@@ -17,7 +17,8 @@ How to manage inconsistencies and unset variables is still not very clear to me,
 >>> import tdmparser 
 >>> tdm = tdmparser.TDMParser('http://207.154.202.197/') 
 >>> tdm.check() 
-[True, 'http://207.154.202.197/license', True]
+# returns the strictest result after checking among, and following the order stated in the proposal, the html metadata, http headers and json tdmrep.json file.
+'http://207.154.202.197/license'
 ```
 You can have a look to the logging file TDM_reservation.log that reports all relevant information about policies and reservation of the url you are scraping.
 
