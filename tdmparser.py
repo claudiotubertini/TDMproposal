@@ -54,24 +54,21 @@ class TDMParser:
         res = []
         tdmhtml = TDMhtmlHead(self.url)
         exc = tdmhtml.is_allowed()
-        # ret = exc or isinstance(exc, str)
-        res.append(exc)
         tdmheader = TDMHeader(self.url)
         exc = tdmheader.is_allowed()
-        # ret = exc or isinstance(exc, str)
         res.append(exc)
         tdmjson = TDMFileParser(self.url)
         tdmjson.read()
         exc = tdmjson.can_fetch(self.url)
-        # ret = exc or isinstance(exc, str) or self.allow_all
         res.append(exc)
-        # return all(res)
-        # return any(tdmhtml.allow_all, tdmheader.allow_all, tdmjson.allow_all)
-        return res
-
-        
-        
-
+        #### TODO
+        for x in res:
+            if x is True:
+                continue
+            if x is False:
+                return False
+            elif isinstance(x,str):
+                return x
 
 class TDMFileParser:
     """ This class provides a set of methods to read, parse and answer
