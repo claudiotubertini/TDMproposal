@@ -48,27 +48,28 @@ class TDMParser:
         self.url = urllib.parse.urlunparse(urllib.parse.urlparse(url))
         # self.allow_all = True #### TODO
 
-    
-    def check(self):
+     def check(self):
         logging.debug(f'TDM specification about {self.url}')
         res = []
         tdmhtml = TDMhtmlHead(self.url)
         exc = tdmhtml.is_allowed()
+        if exc is False:
+            return False
+        elif isinstance(exc,str):
+            return exc
+        res.append(exc)
         tdmheader = TDMHeader(self.url)
         exc = tdmheader.is_allowed()
+        if exc is False:
+            return False
+        elif isinstance(exc,str):
+            return exc
         res.append(exc)
         tdmjson = TDMFileParser(self.url)
         tdmjson.read()
         exc = tdmjson.can_fetch(self.url)
         res.append(exc)
-        #### TODO
-        for x in res:
-            if x is True:
-                continue
-            if x is False:
-                return False
-            elif isinstance(x,str):
-                return x
+        return all(res)
 
 class TDMFileParser:
     """ This class provides a set of methods to read, parse and answer
